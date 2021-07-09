@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.get(`/${apiPrefix}/healthcheck`, (request, response) => {
+app.get(`${apiPrefix}/healthcheck`, (request, response) => {
   try {
     response.status(200).send({ message: `Hello from ${apiPrefix}` });
   } catch (error) {
